@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contacto</title>
+  </head>
+  <body>
+    <h1>Contacto</h1>
+    <form action="http://andreihelo-sinatra.herokuapp.com/contact" method="post">
+    <fieldset>
+    <legend>Informacion personal</legend>
+    Nombre:<br>
+    <input type="text" name="person[name]" value="nombre">
+    <br><br>
+    sexo:<br>
+    <input type="radio" name="person[genre]" value="masculino"> Masculino <br>
+    <input type="radio" name="person[genre]" value="femenino"> Femenino <br><br>
+    Fecha de nacimiento:<br>
+    <input type="text" name="person[birthdate]" value="dd/mm/aaa"><br><br>
+    Ciudad de origen:<br>
+    <select  name="person[city]">
+      <option value="Chihuahua">Chihuahua</option>
+      <option value="Juarez">Juarez</option>
+      <option value="Delicias">Delicias</option>
+    </select>
+    <br><br>
+  </fieldset>
+  <fieldset>
+    <legend>Preferencias</legend>
+    Seleccione uno o mas:<br>
+    <input type="checkbox" name="person[preferences][]" value="codigo"> Me gusta programar
+    mas de 1hr al dia <br>
+    <input type="checkbox" name="person[preferences][]" value="videojuegos"> Tengo al menos 1 consola
+    y mas de 1 juego <br>
+    <input type="checkbox" name="person[preferences][]" value="gadgets"> Leo sobre los ultimos
+    gadgets del momento <br><br>
+    Escribenos:<br>
+    <textarea name="message" rows="10" cols="40"></textarea>
+    <br><br>
+    <input type="submit">
+  </fieldset>
+    </form>
+  </body>
+</html>
